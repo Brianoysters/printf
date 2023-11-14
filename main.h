@@ -33,7 +33,6 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
-
 /**
  * typedef struct fmt fmt_t - Struct op
  *
@@ -48,7 +47,7 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /******* FUNCTIONS TO OTHERS *******/
 
-/* it is a funtions to print chars and stringes */
+/* it is a funtions to print chars and string */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
@@ -56,11 +55,8 @@ int print_string(va_list types, char buffer[],
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-
-
-/*it is a funciotns to hadle other specifiers */
+/*it is a function to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
-
 
 #endif
