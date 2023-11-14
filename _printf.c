@@ -4,6 +4,7 @@
  * @format:it is an identifier to look for
  * Return:it will return the length of the strig.
  */
+
 int _printf(const char * const format, ...)
 {
 	convert p[] = {
@@ -16,7 +17,7 @@ int _printf(const char * const format, ...)
 		{"%S", print_exc_string}, {"%p", print_pointer}
 	};
 
-	var_list args;
+	va_list args;
 	int i = 0, j, length = 0;
 
 	va_start(args, format);

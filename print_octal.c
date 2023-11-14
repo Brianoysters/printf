@@ -3,34 +3,34 @@
 /**
  * print_oct -it will  print an octal nuber
  * @vall:it is an arguments
- * Return:it will return counter if successful.
+ * Return:it will return counter if success
  */
-int print_oct((var_list vall)
+int print_oct(va_list val)
 {
 	int i;
-	int *arr;
+	int *array;
 	int counter = 0;
-	unsigned int numb = va_arg(val, unsigned int);
-	unsigned int temr = numb;
+	unsigned int num = va_arg(val, unsigned int);
+	unsigned int tem = num;
 
-	while (numb / 8 != 0)
+	while (num / 8 != 0)
 	{
-		numb /= 8;
-		counterr++;
+		num /= 8;
+		counter++;
 	}
-	counterr++;
-	arr = malloc(counter * sizeof(int));
+	counter++;
+	array = malloc(counter * sizeof(int));
 
 	for (i = 0; i < counter; i++)
 	{
-		arr[i] = temr % 8;
-		temr /= 8;
+		array[i] = tem % 8;
+		tem /= 8;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
-		_putchar(arr[i] + '0');
+		_putchar(array[i] + '0');
 	}
-	free(arr);
+	free(array);
 	return (counter);
 }
 

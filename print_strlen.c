@@ -5,8 +5,7 @@
  * @s:it is a string
  * Return:it is an integer.
  */
-
-int _strlen(char  *s)
+int _strlen(char *s)
 {
 	int c;
 
@@ -17,9 +16,9 @@ int _strlen(char  *s)
 }
 
 /**
- * _strlenc -it will find length of a strig but for constant characters.
- * @s:it is a string.
- * Return:it is an integer.
+ * _strlenc - it finds length of a string but for constant characters
+ * @s: string input
+ * Return: an integer
  */
 
 int _strlenc(const char *s)

@@ -4,36 +4,36 @@
  * @args:it is an arguument to print.
  * Return:it will return an  integer if successful.
  */
-int print_i(vari_list args)
+int print_i(va_list args)
 {
 	int n = va_arg(args, int);
-	int numb, last = n % 10, digit, exp = 1;
+	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
 	n = n / 10;
-	numb = n;
+	num = n;
 
 	if (last < 0)
 	{
 		_putchar('-');
-		numb = -numb;
+		num = -num;
 		n = -n;
 		last = -last;
 		i++;
 	}
-	if (numb > 0)
+	if (num > 0)
 	{
-		while (numb / 10 != 0)
+		while (num / 10 != 0)
 		{
 			exp = exp * 10;
-			numb = numb / 10;
+			num = num / 10;
 		}
-		numb = n;
+		num = n;
 		while (exp > 0)
 		{
-			digit = numb / exp;
+			digit = num / exp;
 			_putchar(digit + '0');
-			numb = numb - (digit * exp);
+			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
@@ -44,42 +44,42 @@ int print_i(vari_list args)
 }
 
 /**
- * print_d -it will print decimal.
- * @args:it is an argument to print.
- * Return:it will return  integer if successful.
+ * print_d -it prints decimal
+ * @args: it gives argument to print
+ * Return: integer
  */
 
-int print_d(vari_list args)
+int print_d(va_list args)
 {
 	int n = va_arg(args, int);
-	int numb, last = n % 10, digit;
+	int num, last = n % 10, digit;
 	int  i = 1;
 	int exp = 1;
 
 	n = n / 10;
-	numb = n;
+	num = n;
 
 	if (last < 0)
 	{
 		_putchar('-');
-		numb = -numb;
+		num = -num;
 		n = -n;
 		last = -last;
 		i++;
 	}
-	if (numb > 0)
+	if (num > 0)
 	{
-		while (numb / 10 != 0)
+		while (num / 10 != 0)
 		{
 			exp = exp * 10;
-			numb = numb / 10;
+			num = num / 10;
 		}
-		numb = n;
+		num = n;
 		while (exp > 0)
 		{
-			digit = numb / exp;
+			digit = num / exp;
 			_putchar(digit + '0');
-			numb = numb - (digit * exp);
+			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}

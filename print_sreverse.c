@@ -5,7 +5,7 @@
  * @args: it is a type struct va_arg where is allocated printf arguments
  * Return:return  the string
  */
-int print_revs(vari_list args)
+int print_revs(va_list args)
 {
 
 	char *s = va_arg(args, char*);
@@ -20,4 +20,3 @@ int print_revs(vari_list args)
 		_putchar(s[i]);
 	return (j);
 }
-

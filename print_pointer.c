@@ -2,15 +2,15 @@
 
 /**
  * print_pointer - prints hexadecimal nuber.
- * @vall:it is an  arguments.
+ * @val:it is an  arguments.
  * Return:it will returned counter if successful
  */
-int print_pointer((var_list vall)
+int print_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
 	long int x;
-	int h;
+	int y;
 	int i;
 
 	p = va_arg(val, void*);
@@ -29,4 +29,3 @@ int print_pointer((var_list vall)
 	y = print_hex_extra(x);
 	return (y + 2);
 }
-

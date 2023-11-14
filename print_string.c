@@ -4,13 +4,12 @@
  * @vall:it is an argument.
  * Return:it will return the length of the strig.
  */
-
-int print_s((var_list vall)
+int print_s(va_list val)
 {
 	char *s;
 	int i, len;
 
-	s = va_arg(vall, char *);
+	s = va_arg(val, char *);
 	if (s == NULL)
 	{
 		s = "(null)";
@@ -27,4 +26,3 @@ int print_s((var_list vall)
 		return (len);
 	}
 }
-

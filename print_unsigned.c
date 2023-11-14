@@ -4,36 +4,36 @@
  * @args:it is an argument to print.
  * Return:it will return intenger
  */
-int print_unsigned(vari_list args)
+int print_unsigned(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	int numb, last = n % 10, digit, exp = 1;
+	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
 	n = n / 10;
-	numb = n;
+	num = n;
 
 	if (last < 0)
 	{
 		_putchar('-');
-		numb = -numb;
+		num = -num;
 		n = -n;
 		last = -last;
 		i++;
 	}
-	if (numb > 0)
+	if (num > 0)
 	{
-		while (numb / 10 != 0)
+		while (num / 10 != 0)
 		{
 			exp = exp * 10;
-			numb = numb / 10;
+			num = num / 10;
 		}
-		numb = n;
+		num = n;
 		while (exp > 0)
 		{
-			digit = numb / exp;
+			digit = num / exp;
 			_putchar(digit + '0');
-			numb = numb - (digit * exp);
+			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
@@ -42,4 +42,3 @@ int print_unsigned(vari_list args)
 
 	return (i);
 }
-

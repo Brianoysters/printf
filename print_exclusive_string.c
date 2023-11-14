@@ -1,17 +1,17 @@
 #include "main.h"
 /**
  * print_exc_string -it will  print exclusives strig.
- * @vall:it is a  parameter.
+ * @val:it is a  parameter.
  * Return:it will return an  integer.
  */
 
-int print_exc_string((var_list vall)
+int print_exc_string(va_list val)
 {
 	char *s;
 	int i, length = 0;
 	int value;
 
-	s = va_arg(vall, char *);
+	s = va_arg(val, char *);
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)

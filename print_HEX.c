@@ -1,37 +1,37 @@
 #include "main.h"
 
 /**
- * print_HEX -it prints an hexadecimal nuber.
- * @vall:it is an arguments.
- * Return:it is a  counter
+ * print_HEX - prints an hexgecimal number.
+ * @val: arguments.
+ * Return: counter.
  */
-int print_HEX((var_list vall)
+int print_HEX(va_list val)
 {
 	int i;
-	int *arr;
+	int *array;
 	int counter = 0;
-	unsigned int numb = va_arg(vall, unsigned int);
-	unsigned int temr = numb;
+	unsigned int num = va_arg(val, unsigned int);
+	unsigned int tem = num;
 
-	while (numb / 16 != 0)
+	while (num / 16 != 0)
 	{
-		numb /= 16;
-		counterr++;
+		num /= 16;
+		counter++;
 	}
-	counterr++;
-	arr = malloc(counter * sizeof(int));
+	counter++;
+	array = malloc(counter * sizeof(int));
 
 	for (i = 0; i < counter; i++)
 	{
-		arr[i] = temr % 16;
-		temr /= 16;
+		array[i] = tem % 16;
+		tem /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
-		if (arr[i] > 9)
-			arr[i] = arr[i] + 7;
-		_putchar(arr[i] + '0');
+		if (array[i] > 9)
+			array[i] = array[i] + 7;
+		_putchar(array[i] + '0');
 	}
-	free(arr);
+	free(array);
 	return (counter);
 }

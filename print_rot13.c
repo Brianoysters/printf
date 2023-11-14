@@ -4,7 +4,7 @@
  * @args:it is a printf argument.
  * Return: 1 if successful
  */
-int print_rot13(vari_list args)
+int print_rot13(va_list args)
 {
 	int i, j, counter = 0;
 	int k = 0;
@@ -22,16 +22,15 @@ int print_rot13(vari_list args)
 			if (s[i] == al[j])
 			{
 				_putchar(bl[j]);
-				counterr++;
+				counter++;
 				k = 1;
 			}
 		}
 		if (!k)
 		{
 			_putchar(s[i]);
-			counterr++;
+			counter++;
 		}
 	}
-	return (1);
+	return (counter);
 }
-
