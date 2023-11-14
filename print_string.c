@@ -10,7 +10,7 @@ int print_s((var_list vall)
 	char *s;
 	int i, len;
 
-	s = va_arg(val, char *);
+	s = va_arg(vall, char *);
 	if (s == NULL)
 	{
 		s = "(null)";
