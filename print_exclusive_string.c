@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_exc_string -it will  print exclusives strig.
- * @val:it is a  parameter.
+ * @vall:it is a  parameter.
  * Return:it will return an  integer.
  */
 
