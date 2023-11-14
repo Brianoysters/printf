@@ -12,7 +12,6 @@
  * struct format -it will be converter for printf.
  * @phi: it is a type char pointer of the specifier.
  * @function:it is a function for the conversion specifier.
- *
  */
 
 typedef struct format
