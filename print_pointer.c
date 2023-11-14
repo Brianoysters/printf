@@ -2,7 +2,7 @@
 
 /**
  * print_pointer - prints hexadecimal nuber.
- * @val:it is an  arguments.
+ * @vall:it is an  arguments.
  * Return:it will returned counter if successful
  */
 int print_pointer((var_list vall)

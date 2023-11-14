@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_bin -it will print binary nuber.
+ * print_binary -it will print binary nuber.
  * @vall:it is a parameter.
  * Return:it is an  integer
  */
