@@ -10,7 +10,7 @@
 
 /**
  * struct format -it will be converter for printf.
- * @ph: it is a type char pointer of the specifier.
+ * @phi: it is a type char pointer of the specifier.
  * @function:it is a function for the conversion specifier.
  *
  */
