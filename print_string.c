@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_s -it will print a strig
- * @vall:it is an argument.
+ * @val:it is an argument.
  * Return:it will return the length of the strig.
  */
 int print_s(va_list val)
